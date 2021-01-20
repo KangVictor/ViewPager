@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 public class DemoFragment extends Fragment {
@@ -25,5 +26,10 @@ public class DemoFragment extends Fragment {
         String message = getArguments().getString("message");
         textView.setText(message);
         return view;
+    }
+
+    public void onCheckboxClicked(View view) {
+        boolean checked = ((CheckBox) view).isChecked();
+//        smallTitleText.setText(view.getId() + " " + checked);
     }
 }

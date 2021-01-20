@@ -51,6 +51,7 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/uploadButton"
+            android:onClick="onUploadButtonClicked"
             android:layout_width="match_parent"
             android:padding="10dp"
             android:layout_margin="10dp"
