@@ -22,7 +22,7 @@ import android.widget.ArrayAdapter;
 
 public class DemoFragment extends Fragment {
     
-    private TextView textView;
+    private TextView pathText;
     private ArrayList<File> fileList;
     private ArrayList<File> folderList;
 
@@ -37,9 +37,10 @@ public class DemoFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_demo, container, false);
-        textView = view.findViewById(R.id.txt_display);
+        pathText = view.findViewById(R.id.path_text);
+
         String message = getArguments().getString("position");
-        textView.setText(message);
+        pathText.setText(message);
 
         folderListView = (ListView) view.findViewById(R.id.folder_listview);
         fileListView = (ListView) view.findViewById(R.id.file_listview);
@@ -52,6 +53,7 @@ public class DemoFragment extends Fragment {
 //        fileList.add("very hello");
 
         File root = new File(Environment.getRootDirectory().getName());
+        pathText.setText(root.toString());
         Log.d("MainActivity", root.toString());
         Log.d("MainActivity", root.listFiles()[0].toString());
 
@@ -69,6 +71,7 @@ public class DemoFragment extends Fragment {
                 Log.i("DemoFragment", "onFolderClick: " + position);
                 Log.i("DemoFragment", "onFolderClick: " + nextLocation);
 
+                pathText.setText(nextLocation.toString());
                 ListDir(nextLocation);
                 ArrayAdapter<File> dir = new ArrayAdapter<File>(getActivity().getApplicationContext(), android.R.layout.simple_list_item_1, folderList); // doesn't work inside ListDir
                 folderListView.setAdapter(dir);
