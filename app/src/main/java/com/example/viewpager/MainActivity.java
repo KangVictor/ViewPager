@@ -28,9 +28,4 @@ public class MainActivity extends AppCompatActivity {
     public void onUploadButtonClicked(View view){
 
     }
-
-//    public void onCheckboxClicked(View view) {
-//        boolean checked = ((CheckBox) view).isChecked();
-////        smallTitleText.setText(view.getId() + " " + checked);
-//    }
 }
