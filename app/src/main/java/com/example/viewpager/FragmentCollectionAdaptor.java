@@ -18,7 +18,8 @@ public class FragmentCollectionAdaptor extends FragmentStatePagerAdapter {
         DemoFragment demoFragment = new DemoFragment();
         Bundle bundle = new Bundle();
         position += 1;
-        bundle.putString("message", "Page:" + position);
+
+        bundle.putString("position", "Page " + position);
         demoFragment.setArguments(bundle);
         return demoFragment;
     }
