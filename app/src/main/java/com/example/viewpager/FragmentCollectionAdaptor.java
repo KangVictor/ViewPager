@@ -18,14 +18,13 @@ public class FragmentCollectionAdaptor extends FragmentStatePagerAdapter {
         DemoFragment demoFragment = new DemoFragment();
         Bundle bundle = new Bundle();
         position += 1;
-
-        bundle.putString("position", "Page " + position);
+        bundle.putInt("position", position);
         demoFragment.setArguments(bundle);
         return demoFragment;
     }
 
     @Override
     public int getCount() { // return number of pages to display
-        return 100;
+        return 2;
     }
 }
