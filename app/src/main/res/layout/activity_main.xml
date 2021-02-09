@@ -11,18 +11,18 @@
     android:background="@color/white"
     tools:context=".MainActivity">
 
-    <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/titleText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:paddingLeft="20dp"
-        android:paddingTop="20dp"
-        android:paddingRight="20dp"
-        android:text="Title"
-        android:textColor="@color/black"
-        android:textSize="40dp"
-        tools:layout_editor_absoluteX="10dp" />
+<!--    <com.google.android.material.textview.MaterialTextView-->
+<!--        android:id="@+id/titleText"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:paddingLeft="20dp"-->
+<!--        android:paddingTop="20dp"-->
+<!--        android:paddingRight="20dp"-->
+<!--        android:text="Title"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="40dp"-->
+<!--        tools:layout_editor_absoluteX="10dp" />-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -33,7 +33,7 @@
             android:layout_marginRight="25dp"
             android:id="@+id/pager"
             android:layout_width="match_parent"
-            android:layout_height="400dp"/>
+            android:layout_height="wrap_content"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/uploadButton"

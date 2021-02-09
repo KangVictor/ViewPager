@@ -23,6 +23,7 @@ import android.widget.ArrayAdapter;
 public class DemoFragment extends Fragment {
     
     private TextView pathText;
+    private TextView titleText;
     private ArrayList<File> fileList;
     private ArrayList<File> folderList;
 
@@ -39,8 +40,16 @@ public class DemoFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_demo, container, false);
         pathText = view.findViewById(R.id.path_text);
 
-        String message = getArguments().getString("position");
-        pathText.setText(message);
+        titleText = view.findViewById(R.id.titleText);
+        int position = getArguments().getInt("position");
+        if(position == 1) {
+            titleText.setText("Phone Storage");
+        } else if(position == 2) {
+            titleText.setText("Server");
+        }
+//        titleText.setText(position);
+
+
 
         folderListView = (ListView) view.findViewById(R.id.folder_listview);
         fileListView = (ListView) view.findViewById(R.id.file_listview);

@@ -2,21 +2,32 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".DemoFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
     <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/titleText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:paddingTop="20dp"
+        android:text="Title"
+        android:textColor="@color/black"
+        android:textSize="40dp" />
+
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/path_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
         android:text="Message Here"
         android:textColor="@color/black"
+        android:layout_margin="10dp"
         android:textSize="24sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/titleText" />
 
 
 <!--    <CheckBox android:id="@+id/aaa"-->
@@ -48,17 +59,16 @@
         android:id="@+id/folderText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_margin="10dp"
         android:text="Foders"
         android:textColor="@color/black"
         app:layout_constraintTop_toBottomOf="@+id/path_text"
         android:textSize="18sp" />
+
     <ListView
         android:id="@+id/folder_listview"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="248dp"
         app:layout_constraintTop_toBottomOf="@+id/folderText"
         android:choiceMode="none"/>
 
@@ -66,17 +76,16 @@
         android:id="@+id/fileText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="10dp"
         android:text="Files"
         android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textSize="18dp"
         app:layout_constraintTop_toBottomOf="@+id/folder_listview" />
 
     <ListView
         android:id="@+id/file_listview"
         android:layout_width="match_parent"
         android:layout_height="180dp"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="248dp"
         app:layout_constraintTop_toBottomOf="@+id/fileText"
         android:choiceMode="multipleChoice"/>
 
